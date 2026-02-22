@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>G-FYD Association | Founder Gana Ram Sai</title>
+    <meta name="description" content="G-FYD Association - Against Sexual Abuses. Dedicated to Social Service and Development. Founded by Gana Ram Sai.">
+    <meta name="keywords" content="G-FYD, g-fyd, GFYD, gfyd, gana ram sai, G-FYD ASSOCIATION, g-fyd association, gfyd association, gana ram sai website, g-fyd website, association website, association, gfid association, gfid">
+    <meta name="author" content="Gana Ram Sai">
+    
+    <meta property="og:title" content="G-FYD Association | Gana Ram Sai">
+    <meta property="og:description" content="Working against sexual abuses and for social development.">
+    <meta property="og:type" content="website">
+
+    <style>
+        /* High Performance CSS Variables */
+        :root {
+            --primary-btn: linear-gradient(135deg, #d4ff00, #f8ff00); /* Yellow-Green Mix */
+            --primary-hover: #c4eb00;
+            --text-dark: #1a1a1a;
+            --bg-light: #ffffff;
+            --gold: #d4af37;
+            --card-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* FIZONYX Fix: Removing the blue focus outline on touch/click */
+        *:focus {
+            outline: none !important;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+            -webkit-tap-highlight-color: transparent; /* Mobile touch blue tint removal */
+        }
+
+        /* Navigation Menu */
+        .nav-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .menu-btn {
+            background: var(--primary-btn);
+            border: none;
+            padding: 10px 15px;
+            font-size: 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .side-menu {
+            position: fixed;
+            top: 0;
+            right: -250px;
+            width: 250px;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            color: #d4ff00;
+            box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            padding: 60px 20px;
+            z-index: 999;
+        }
+
+        .side-menu.active { right: 0; }
+
+        .side-menu a {
+            text-decoration: none;
+            background : rgba(0, 0, 0, 0.85);
+            color: #d4ff00;
+            font-weight: 600;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+            transition: 0.2s;
+        }
+        
+        .side-menu a:hover { color: #888; }
+
+        /* Header Section */
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            background: #fdfdfd;
+        }
+
+        .logo-img {
+            width: 120px;
+            height: auto;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        /* Profile Section */
+        .profile-section {
+            text-align: center;
+            padding: 60px 20px;
+            background: #fff;
+        }
+
+        .profile-img {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid var(--gold);
+            margin-bottom: 20px;
+            transition: transform 0.3s;
+        }
+        
+        .profile-img:hover { transform: scale(1.05); }
+
+        .profile-name {
+            font-size: 2rem;
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        /* Common Button Style */
+        .btn-main {
+            background:  rgba(0, 0, 0, 0.85);
+            color :#d4ff00;
+            border: 2px solid #d4ff00;
+            padding: 14px 35px;
+            font-size: 1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow:  0 10px 20px rgba(0,0,0,0.3);
+            margin-top: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            outline: none; /* Removal of focus outline */
+        }
+
+        .btn-main:hover { background: var(--primary-hover); transform: translateY(-2px); }
+        .btn-main:active { transform: scale(0.95); }
+
+        /* Updated Future Goals Section */
+        .future-goals {
+            padding: 80px 20px;
+            background: #f9f9f9;
+            text-align: center;
+            position: relative;
+        }
+
+        .goals-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        .goal-box {
+            background: white;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: var(--card-shadow);
+            border: 1px solid #eee;
+            transition: 0.3s;
+        }
+
+        .goal-box h4 {
+            color: #000;
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .coming-soon-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(-5deg);
+            background: rgba(0, 0, 0, 0.85);
+            color: #d4ff00;
+            padding: 15px 40px;
+            font-size: 1.8rem;
+            font-weight: 900;
+            border-radius: 10px;
+            z-index: 10;
+            border: 2px solid #d4ff00;
+            pointer-events: none;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        /* Updated About Us Section (Card Style) */
+        .about-section {
+            padding: 80px 20px;
+            background: #fff;
+        }
+
+        .about-card {
+            max-width: 800px;
+            margin: 0 auto;
+            background: #1a1a1a;
+            color: #fff;
+            padding: 50px;
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-card::before {
+            content: '';
+            position: absolute;
+            top: 0; right: 0;
+            width: 150px; height: 150px;
+            background: var(--primary-btn);
+            opacity: 0.1;
+            border-radius: 0 0 0 100%;
+        }
+
+        .about-card h2 {
+            color: #d4ff00;
+            margin-bottom: 25px;
+            font-size: 2rem;
+            border-bottom: 1px solid #333;
+            padding-bottom: 15px;
+        }
+
+        .contact-info {
+            display: grid;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .info-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .info-item strong { color: #d4af37; min-width: 80px; }
+        .info-item a { color: #fff; text-decoration: none; border-bottom: 1px solid #555; }
+
+        /* Form & Modals */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.85);
+            z-index: 1001;
+            overflow-y: auto;
+            padding: 20px;
+            backdrop-filter: blur(5px);
+        }
+
+        .form-content {
+            background: #fff;
+            max-width: 500px;
+            margin: 40px auto;
+            padding: 40px;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 14px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background: #fcfcfc;
+        }
+
+        /* Certificate Styles */
+        .cert-modal {
+            display: none;
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: #111;
+            z-index: 2000;
+            overflow: auto;
+        }
+
+        .certificate-container {
+            position: relative; width: 95%; max-width: 800px;
+            background-color: #000; color: #fff; padding: 40px;
+            border: 3px double #d4af37; text-align: center; margin: 50px auto;
+        }
+        .certificate-container::after { content: ''; position: absolute; top: 10px; left: 10px; right: 10px; bottom: 10px; border: 0.4px solid #d4af37; pointer-events: none; }
+        .logo { width: 80px; margin-bottom: 20px; }
+        h1.cert-h1 { color: #d4af37; font-size: 2.2rem; text-transform: uppercase; margin-bottom: 10px; }
+        .recipient-name { font-family: 'Georgia', serif; font-size: 1.8rem; border-bottom: 2px solid #d4af37; display: inline-block; margin: 25px 0; padding: 0 40px; }
+        .signature-section { margin-top: 40px; display: flex; justify-content: flex-end; padding-right: 30px; }
+        .signature-box { border-top: 1px solid #d4af37; padding-top: 10px; text-align: center; }
+
+        /* Toast Popup */
+        #toast {
+            visibility: hidden;
+            min-width: 250px;
+            background-color: #d4ff00;
+            color: #000;
+            font-weight: bold;
+            text-align: center;
+            border-radius: 50px;
+            padding: 16px;
+            position: fixed;
+            z-index: 3000;
+            left: 50%;
+            bottom: 30px;
+            transform: translateX(-50%);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        #toast.show { visibility: visible; animation: fadein 0.5s, fadeout 0.5s 2.5s; }
+
+        @keyframes fadein { from {bottom: 0; opacity: 0;} to {bottom: 30px; opacity: 1;} }
+        @keyframes fadeout { from {bottom: 30px; opacity: 1;} to {bottom: 0; opacity: 0;} }
+
+        @media (max-width: 600px) {
+            .about-card { padding: 30px 20px; }
+            .coming-soon-overlay { font-size: 1.2rem; width: 80%; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+
+
+
+<div class="nav-container">
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+</div>
+<div class="side-menu" id="sideMenu">
+    <a href="#" onclick="toggleMenu()">Home</a>
+    <a href="#membership" onclick="toggleMenu()">Membership</a>
+    <a href="#complaint" onclick="toggleMenu()">Complaint</a>
+    <a href="#goals" onclick="toggleMenu()">Future Goals</a>
+    <a href="#about" onclick="toggleMenu()">About Us</a>
+</div>
+
+<header id="home">
+    <img src="logo.png" alt="G-FYD Logo" class="logo-img">
+    <h2>G-FYD ASSOCIATION</h2>
+    <p>Against Sexual Abuses. For Social Service and Development.</p>
+</header>
+
+<section class="profile-section">
+    <img src="profile.png" alt="Gana Ram Sai" class="profile-img">
+    <br>
+    <a href="https://www.instagram.com/gana_ram_sai?igsh=cXk5OXJqdDA5d3Q3" class="profile-name">Gana Ram Sai</a>
+    <p style="color: #666; font-weight: 600;">Founder & President</p>
+</section>
+
+<section id="membership" style="text-align: center; padding: 80px 20px; background: #fafafa;">
+    <h2 style="font-size: 2.2rem; letter-spacing: 2px;">MEMBERSHIP</h2>
+    <p>Join us in making a difference in society.</p>
+    <button class="btn-main" onclick="openModal('memberModal')">JOIN NOW</button>
+</section>
+
+<section id="complaint" style="text-align: center; padding: 80px 20px;">
+    <h2 style="font-size: 2.2rem; letter-spacing: 2px;">COMPLAINT SECTION</h2>
+    <p>Students can file their problems or complaints here. We are here to help.</p>
+    <button class="btn-main" onclick="openModal('complaintModal')">FILE A COMPLAINT</button>
+</section>
+
+<section id="goals" class="future-goals">
+    <h2 style="font-size: 2.2rem; letter-spacing: 2px; margin-bottom: 10px;">FUTURE GOALS & INNOVATIONS</h2>
+    <p style="color: #666;">Our upcoming initiatives for a better future.</p>
+    
+    <div class="goals-container">
+        <div class="coming-soon-overlay">COMING SOON</div>
+        
+        <div class="goal-box">
+            <h4>Virtual Labs</h4>
+            <p>Collaborating with <strong>FIZONYX</strong> to setup High-Tech Virtual Labs in Government Schools to provide practical knowledge to rural students.</p>
+        </div>
+        
+        <div class="goal-box">
+            <h4>Awareness Camps</h4>
+            <p>Conducting Social Awareness Camps and specialized classroom sessions to educate students about their rights and safety.</p>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about-section">
+    <div class="about-card">
+        <h2>ABOUT US</h2>
+        <p style="margin-bottom: 20px; font-weight: bold; color: #d4af37;">G-FYD IS AN UNREGISTERED ASSOCIATION.</p>
+        
+        <div class="contact-info">
+            <div class="info-item">
+                <strong>Contact:</strong>
+                <span>+91-9701904317</span>
+            </div>
+            <div class="info-item">
+                <strong>Email:</strong>
+                <span>gfydassociation@gmail.com</span>
+            </div>
+            <div class="info-item">
+                <strong>Insta:</strong>
+                <a href="https://www.instagram.com/g_fyd_association?igsh=bnlhaHlhdHY4dDR4" target="_blank">@g_fyd_association</a>
+            </div>
+            <div class="info-item">
+                <strong>Address:</strong>
+                <span>AP, East Godavari, Nidadhavolu Mandal, Tadimalla, Chikkala Road, MPPS No.1 School Behind House.</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div id="memberModal" class="modal">
+    <div class="form-content">
+        <h3 style="margin-bottom: 20px; font-size: 1.5rem;">Membership Form</h3>
+        <form id="memberForm">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="tel" name="phone" placeholder="Phone Number" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <select name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+            </select>
+            <textarea name="address" placeholder="Address" rows="3"></textarea>
+            <select name="category" id="category" onchange="handleCategoryChange()">
+                <option value="student">Student</option>
+                <option value="working">Working Professional</option>
+                <option value="other">Other</option>
+            </select>
+            <div id="extraFields">
+                <input type="text" id="extra1" placeholder="College Name">
+                <input type="text" id="extra2" placeholder="Course Name">
+            </div>
+            <button type="submit" class="btn-main" style="width: 100%;">SUBMIT</button>
+            <button type="button" onclick="closeModal('memberModal')" style="width: 100%; background: none; border: none; margin-top: 10px; cursor: pointer; color: #666;">Close</button>
+        </form>
+    </div>
+</div>
+
+<div id="complaintModal" class="modal">
+    <div class="form-content">
+        <h3 style="margin-bottom: 20px; font-size: 1.5rem;">File Your Complaint</h3>
+        <form id="complaintForm">
+            <input type="text" name="name" placeholder="Name" required>
+            <select name="gender">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+            <input type="tel" name="phone" placeholder="Phone">
+            <textarea name="address" placeholder="Address" rows="2"></textarea>
+            <textarea name="problem" placeholder="Describe your problem" required rows="4"></textarea>
+            <button type="submit" class="btn-main" style="width: 100%;">SUBMIT COMPLAINT</button>
+            <button type="button" onclick="closeModal('complaintModal')" style="width: 100%; background: none; border: none; margin-top: 10px; cursor: pointer; color: #666;">Close</button>
+        </form>
+    </div>
+</div>
+
+<div id="certModal" class="cert-modal">
+    <div class="certificate-container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <h1 class="cert-h1">Certificate of Membership</h1>
+        <p>This is to certify that the individual named below</p>
+        <div class="recipient-name" id="certName">Name of member</div>
+        <p>is a dedicated member of G-FYD,<br>committed to social service and development.</p>
+        <div class="signature-section">
+            <div class="signature-box">
+                <div style="font-weight:bold; font-size: 1rem;">Gana Ram Sai</div>
+                <div style="color:#c5a059; font-size: 0.8rem;">Founder & President</div>
+            </div>
+        </div>
+    </div>
+    <div style="text-align:center; padding-bottom: 40px;">
+        <button class="btn-main" onclick="closeModal('certModal')">CLOSE & DOWNLOAD</button>
+    </div>
+</div>
+
+<div id="toast">Successfully Submitted!</div>
+
+<script>
+    const SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbz96QZy1Hr0Tb43vT6sOGPChMaOWCerevh-ngrUwln6tx9-Qw7ylUIHLJxwAiqoYynl/exec';
+
+    function toggleMenu() {
+        document.getElementById('sideMenu').classList.toggle('active');
+    }
+
+    function openModal(id) { document.getElementById(id).style.display = 'block'; }
+    function closeModal(id) { document.getElementById(id).style.display = 'none'; }
+
+    function handleCategoryChange() {
+        const cat = document.getElementById('category').value;
+        const e1 = document.getElementById('extra1');
+        const e2 = document.getElementById('extra2');
+        if(cat === 'student') { e1.placeholder="College Name"; e2.placeholder="Course"; e2.style.display="block"; }
+        else if(cat === 'working') { e1.placeholder="Company Name"; e2.placeholder="Your Role"; e2.style.display="block"; }
+        else { e1.placeholder="What do you do?"; e2.style.display="none"; }
+    }
+
+    function showToast() {
+        var x = document.getElementById("toast");
+        x.className = "show";
+        setTimeout(function(){ x.className = x.className.replace("show", ""); }, 3000);
+    }
+
+    document.getElementById('memberForm').onsubmit = async (e) => {
+        e.preventDefault();
+        const btn = e.target.querySelector('button[type="submit"]');
+        btn.innerText = "SENDING...";
+        
+        const formData = {
+            formType: 'membership',
+            name: e.target.name.value,
+            phone: e.target.phone.value,
+            email: e.target.email.value,
+            gender: e.target.gender.value,
+            address: e.target.address.value,
+            category: e.target.category.value,
+            extraInfo1: document.getElementById('extra1').value,
+            extraInfo2: document.getElementById('extra2').value
+        };
+        
+        try {
+            await fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(formData) });
+            closeModal('memberModal');
+            document.getElementById('certName').innerText = formData.name;
+            openModal('certModal');
+        } catch (err) {
+            alert("Error submitting. Please try again.");
+        } finally {
+            btn.innerText = "SUBMIT";
+        }
+    };
+
+    document.getElementById('complaintForm').onsubmit = async (e) => {
+        e.preventDefault();
+        const btn = e.target.querySelector('button[type="submit"]');
+        btn.innerText = "SUBMITTING...";
+
+        const formData = {
+            formType: 'complaint',
+            name: e.target.name.value,
+            gender: e.target.gender.value,
+            phone: e.target.phone.value,
+            address: e.target.address.value,
+            problem: e.target.problem.value
+        };
+
+        try {
+            await fetch(SCRIPT_URL, { method: 'POST', body: JSON.stringify(formData) });
+            closeModal('complaintModal');
+            showToast();
+        } catch (err) {
+            alert("Error submitting. Please try again.");
+        } finally {
+            btn.innerText = "SUBMIT COMPLAINT";
+        }
+    };
+</script>
+</body>
+</html>
