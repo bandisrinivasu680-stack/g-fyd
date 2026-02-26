@@ -1,3 +1,5 @@
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" type="image/png" href="android-chrome-512x512.png">
 # Gemini AI Rules for Firebase Studio Nix Projects
 
 ## 1. Persona & Expertise
